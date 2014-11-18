@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<skin version="0.2">
+    <title xml:lang="ko">웹빌드 가맹점 안내 페이지 스킨</title>
+    <title xml:lang="en">webbuilder chain info Skin</title>
+    <description xml:lang="ko">
+		 웹빌드 가맹점 소개 스킨입니다.
+    </description>
+    <version>0.1</version>
+    <date>2014-10-30</date>
+
+    <author email_address="ch7@daum.net" link="http://webbuilder.kr/">
+        <name xml:lang="ko">웹빌드</name>
+        <name xml:lang="en">webbuilder</name>
+    </author>
+    <extra_vars>
+    	
+    	
+        <var name="display_title" type="radio" default="show">
+            <title xml:lang="ko">제목표시</title>
+            <title xml:lang="en">Display title</title>
+            <description xml:lang="ko">
+				문서의 제목을 표시 할지 결정합니다.
+            </description>
+            <options value="show">
+                <title xml:lang="ko">출력</title>
+                <title xml:lang="en">Show</title>
+            </options>
+            <options value="hide">
+                <title xml:lang="ko">출력하지 않음</title>
+                <title xml:lang="en">Hide</title>
+            </options>
+        </var>
+        <var name="display_popupmenu" type="radio" default="show">
+            <title xml:lang="ko">팝업메뉴 표시</title>
+            <title xml:lang="en">Display popup menu</title>
+            <description xml:lang="ko">
+				문서 하단의 팝업 메뉴를 표시 할지 선택합니다.
+            </description>
+            <options value="show">
+                <title xml:lang="ko">출력</title>
+                <title xml:lang="en">Show</title>
+            </options>
+            <options value="hide">
+                <title xml:lang="ko">출력하지 않음</title>
+                <title xml:lang="en">Hide</title>
+            </options>
+        </var>
+        
+        <var name="menu_title_img1" type="image">
+            <title xml:lang="ko">타이틀 이미지1</title>
+            <title xml:lang="en">TITLE IMG  입니다.</title>
+            <description xml:lang="ko">메뉴 이미지를 올려주세요.</description>
+        </var>
+        
+         <var name="menu_title_img2" type="image">
+            <title xml:lang="ko">타이틀 이미지2</title>
+            <title xml:lang="en">TITLE IMG  입니다.</title>
+            <description xml:lang="ko">메뉴 이미지를 올려주세요.</description>
+        </var>
+         <var name="menu_title_img3" type="image">
+            <title xml:lang="ko">타이틀 이미지3</title>
+            <title xml:lang="en">TITLE IMG  입니다.</title>
+            <description xml:lang="ko">메뉴 이미지를 올려주세요.</description>
+        </var>
+         <var name="menu_title_img4" type="image">
+            <title xml:lang="ko">타이틀 이미지4</title>
+            <title xml:lang="en">TITLE IMG  입니다.</title>
+            <description xml:lang="ko">메뉴 이미지를 올려주세요.</description>
+        </var>
+
+        <var name="menu_foot_img" type="image">
+            <title xml:lang="ko">메뉴 하단 이미지 </title>
+            <title xml:lang="en">menu foot img 입니다.</title>
+            <description xml:lang="ko">메뉴 하단 타이틀을 올려 주세요.</description>
+        </var>
+        
+        
+		<var name="menu_subject1" type="text">
+            <title xml:lang="ko">메뉴 1</title>
+            <title xml:lang="en">menu1</title>
+            <description xml:lang="ko">첫번째 메뉴를 입력하세요.</description>
+        </var>
+		<var name="menu_contents1" type="textarea">
+            <title xml:lang="ko">메뉴 1 내용</title>
+            <title xml:lang="en">menu 1 contents</title>
+            <description xml:lang="ko">첫번째 메뉴 설명을 넣어 주세요.</description>
+        </var>
+		<var name="menu_subject2" type="text">
+            <title xml:lang="ko">메뉴 2</title>
+            <title xml:lang="en">menu2</title>
+            <description xml:lang="ko">첫번째 메뉴를 입력하세요.</description>
+        </var>
+        <var name="menu_contents2" type="textarea">
+            <title xml:lang="ko">메뉴 2 내용</title>
+            <title xml:lang="en">menu 2 contents</title>
+            <description xml:lang="ko">두번째 메뉴 설명을 넣어 주세요.</description>
+        </var>
+        <var name="menu_subject3" type="text">
+            <title xml:lang="ko">메뉴 3</title>
+            <title xml:lang="en">menu3</title>
+            <description xml:lang="ko">세번째 메뉴를 입력하세요.</description>
+        </var>
+        <var name="menu_contents3" type="textarea">
+            <title xml:lang="ko">메뉴 3 내용</title>
+            <title xml:lang="en">menu 3 contents</title>
+            <description xml:lang="ko">새번째 메뉴 설명을 넣어 주세요.</description>
+        </var>
+    </extra_vars>
+</skin>

@@ -1,0 +1,83 @@
+<block cond="$oDocument">
+<h1 cond="$module_info->display_title == 'show'">{$oDocument->getTitle()}</h1>
+{$oDocument->getContent($module_info->display_popupmenu != 'hide')}
+</block>
+<block cond="!$oDocument">
+{$lang->none_content}
+</block>
+
+<block cond="!$module_info->contact_title">{@ $module_info->contact_title = 'CONTACT US'}</block>
+<block cond="!$module_info->contact_adtitle">{@ $module_info->contact_adtitle = 'COMPANY, INC'}</block>
+<block cond="!$module_info->contact_adress">{@ $module_info->contact_adress = '주소입력'}</block>
+<block cond="!$module_info->contact_name">{@ $module_info->contact_name = 'ADD TITLE'}</block>
+<block cond="!$module_info->contact_email">{@ $module_info->contact_email = '내용을 입력하세요'}</block>
+<block cond="!$module_info->contact_board">{@ $module_info->contact_board = 'contact_board'}</block>
+<div class="row" id="about_box">
+	<div><img src="{$module_info->about_title_img}"></div>
+	<ul id="about_title">
+		<li><img src="{$module_info->about_img}" id="about_img"></li>
+		<li class="about_contents">{$module_info->about_contents}</li>
+	</ul>
+	
+</div>
+<div class="row">
+	<div class="col-md-12 kso-posts">	
+		<block cond="!$module_info->googlemap">
+		<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.kr/maps?f=q&amp;source=s_q&amp;hl=ko&amp;geocode=&amp;q=%EC%97%AD%EC%82%BC%EB%8F%99&amp;aq=&amp;sll=36.430122,128.056641&amp;sspn=7.907945,16.907959&amp;ie=UTF8&amp;hq=&amp;hnear=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%82%A8%EA%B5%AC+%EC%97%AD%EC%82%BC%EB%8F%99&amp;ll=37.499907,127.037393&amp;spn=0.030475,0.066047&amp;t=m&amp;z=14&amp;output=embed"></iframe>
+		</block>
+		<block cond="$module_info->googlemap">{$module_info->googlemap}</block>		
+	</div>
+</div>
+<!-- End Google map -->
+
+<div class="row">
+	<div class="col-md-12 mBottom30">	
+		<div class="kso_title text-center mBottom40"><div class="title_text">{$module_info->contact_title}</div></div>
+		<div class="row">
+			<div class="col-md-6 mBottom30">	
+				<address>
+					<p><strong class="font-open font16">{$module_info->contact_adtitle}</strong></p>
+					{$module_info->contact_adress}
+				</address>
+				<address>
+					<strong class="font-open">{$module_info->contact_name}</strong><br />
+					{$module_info->contact_email}
+				</address>
+			</div>
+			<div class="col-md-6 mBottom30">	
+				<img class="zbxe_widget_output" widget="contactfree" skin="kso_contact_flat" colorset="light" target_mid="{$module_info->contact_board}" />
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Textarea -->
+<style>
+	 #about_img {
+	 width:100%;
+	 }
+	 #about_title {
+	 width:100%;
+	 list-style:none;
+	 padding:10px 0px;
+	 margin:0px;
+	 margin-bottom:20px;
+	 height:auto;
+	 }
+	 #about_title li {
+	width:50%;
+	float:left;
+	margin-bottom:50px;
+	
+	}
+	.about_contents {
+		padding:10px;
+		font-size:20px;
+	}
+	
+	#about_box {
+		padding:10px;
+		background-color:#fcffc1;
+		border-radius:10px;
+		margin-bottom:10px;
+	}
+</style>

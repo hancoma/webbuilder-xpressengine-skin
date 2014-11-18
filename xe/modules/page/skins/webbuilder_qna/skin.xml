@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin version="0.2">
+    <title xml:lang="ko">KSO 플랫 컨텍트 페이지 스킨</title>
+    <title xml:lang="en">KSO Flat Contact Page Skin</title>
+    <description xml:lang="ko">
+		 KSO 문서형 페이지의 플랫 컨텍트 스킨입니다.
+    </description>
+    <version>0.2</version>
+    <date>2013-11-12</date>
+
+    <author email_address="ksjade@ksodesign.com" link="http://ksodesign.com/">
+        <name xml:lang="ko">KSJade</name>
+        <name xml:lang="en">KSJade</name>
+    </author>
+    <extra_vars>
+        <var name="display_title" type="radio" default="show">
+            <title xml:lang="ko">제목표시</title>
+            <title xml:lang="en">Display title</title>
+            <description xml:lang="ko">
+				문서의 제목을 표시 할지 결정합니다.
+            </description>
+            <options value="show">
+                <title xml:lang="ko">출력</title>
+                <title xml:lang="en">Show</title>
+            </options>
+            <options value="hide">
+                <title xml:lang="ko">출력하지 않음</title>
+                <title xml:lang="en">Hide</title>
+            </options>
+        </var>
+        <var name="display_popupmenu" type="radio" default="show">
+            <title xml:lang="ko">팝업메뉴 표시</title>
+            <title xml:lang="en">Display popup menu</title>
+            <description xml:lang="ko">
+				문서 하단의 팝업 메뉴를 표시 할지 선택합니다.
+            </description>
+            <options value="show">
+                <title xml:lang="ko">출력</title>
+                <title xml:lang="en">Show</title>
+            </options>
+            <options value="hide">
+                <title xml:lang="ko">출력하지 않음</title>
+                <title xml:lang="en">Hide</title>
+            </options>
+        </var>
+
+        <var name="googlemap" type="textarea">
+            <title xml:lang="ko">구글맵 코드</title>
+            <title xml:lang="en">google map code</title>
+            <description xml:lang="ko">구글맵 코드 값을 입력하세요(ksodesign 메뉴얼 참조)</description>
+        </var>
+        <var name="contact_title" type="text">
+            <title xml:lang="ko">컨텍트 타이틀</title>
+            <title xml:lang="en">Contact title</title>
+            <description xml:lang="ko">컨텍트 타이틀을 입력하세요</description>
+        </var>
+		<var name="contact_adtitle" type="text">
+            <title xml:lang="ko">회사 명</title>
+            <title xml:lang="en">Contact title</title>
+            <description xml:lang="ko">회사명을 입력하세요(영문 권장)</description>
+        </var>
+		<var name="contact_adress" type="textarea">
+            <title xml:lang="ko">ㄴ회사 주소</title>
+            <title xml:lang="en">Contact title</title>
+            <description xml:lang="ko">주소 또는 안내 글을 입력하세요(줄바꿈 br 태그 사용)</description>
+        </var>
+		<var name="contact_name" type="text">
+            <title xml:lang="ko">담당 타이틀</title>
+            <title xml:lang="en">Contact name</title>
+            <description xml:lang="ko">담당자 또는 메일 타이틀을 입력하세요(영문 권장)</description>
+        </var>
+		<var name="contact_email" type="text">
+            <title xml:lang="ko">ㄴ이메일</title>
+            <title xml:lang="en">Contact email</title>
+            <description xml:lang="ko">이메일 주소를 입력하세요</description>
+        </var>
+		<var name="contact_board" type="text">
+            <title xml:lang="ko">컨텍트 위젯</title>
+            <title xml:lang="en">Contact widget</title>
+            <description xml:lang="ko">컨텍트 위젯과 연결할 보드 모듈명을 입력하세요.(ex. contact_board)</description>
+        </var>
+    </extra_vars>
+</skin>

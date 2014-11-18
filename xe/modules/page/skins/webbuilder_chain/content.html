@@ -1,0 +1,107 @@
+<block cond="$oDocument">
+<h1 cond="$module_info->display_title == 'show'">{$oDocument->getTitle()}</h1>
+{$oDocument->getContent($module_info->display_popupmenu != 'hide')}
+</block>
+<block cond="!$oDocument">
+{$lang->none_content}
+</block>
+
+<block cond="!$module_info->contact_title">{@ $module_info->contact_title = 'CONTACT US'}</block>
+<block cond="!$module_info->contact_adtitle">{@ $module_info->contact_adtitle = 'COMPANY, INC'}</block>
+<block cond="!$module_info->contact_adress">{@ $module_info->contact_adress = '주소입력'}</block>
+<block cond="!$module_info->contact_name">{@ $module_info->contact_name = 'ADD TITLE'}</block>
+<block cond="!$module_info->contact_email">{@ $module_info->contact_email = '내용을 입력하세요'}</block>
+<block cond="!$module_info->contact_board">{@ $module_info->contact_board = 'contact_board'}</block>
+<div class="row" id="menu_title">
+<ul id="menu_title_img">
+	<li><img src="{$module_info->menu_title_img1}"></li>
+	<li><img src="{$module_info->menu_title_img2}"></li>
+	<li><img src="{$module_info->menu_title_img3}"></li>
+	<li><img src="{$module_info->menu_title_img4}"></li>
+</ul>
+<div id="menu_foot_title"><img src="{$module_info->menu_foot_img}" alt="" class="menu_foot_img"></div>
+	
+</div>
+<div><img src="{$module_info->about_title_img}"></div>
+
+<ul id="menu_box">
+	<li id="menu_subject">{$module_info->menu_subject1}</li>
+	<li id="menu_contents">{$module_info->menu_contents1}</li>
+		<li id="menu_subject">{$module_info->menu_subject2}</li>
+	<li id="menu_contents">{$module_info->menu_contents2}</li>
+			<li id="menu_subject">{$module_info->menu_subject3}</li>
+	<li id="menu_contents">{$module_info->menu_contents3}</li>
+</ul>
+
+<!-- End Textarea -->
+<style>
+		#menu_box {
+			list-style: none;
+			width:100%;
+			padding:0px;
+			margin:0px;
+		}
+		#menu_subject {
+			max-width:50%;
+			background-color: #ff0000;
+			padding:10px;
+			text-align:center;
+			font-size: 2em;
+			color:#fff;
+			border-radius: 10px;
+		}
+		#menu_contents {
+			max-width:100%;
+			color:#000;
+			padding: 10px;
+			font-size: 1.8em;
+		}
+
+		#menu_title_img {
+			list-style: none;
+			padding:0px;
+			margin:0px;
+			width:100%;
+		}
+		#menu_title_img li {
+				width:48%;
+				margin:1%;
+				float:left;
+		}
+		#menu_title_img li img {
+			width:100%;
+		}
+
+		.menu_foot_img {
+			border-radius: 10px;
+		}
+	 #about_img {
+	 width:100%;
+	 }
+
+	 #about_title {
+	 width:100%;
+	 list-style:none;
+	 padding:10px 0px;
+	 margin:0px;
+	 margin-bottom:20px;
+	 height:auto;
+	 }
+	 #about_title li {
+	width:50%;
+	float:left;
+	margin-bottom:50px;
+	
+	}
+	.about_contents {
+		padding:10px;
+		font-size:20px;
+	}
+	
+	#about_box {
+		padding:10px;
+		background-color:#fcffc1;
+		border-radius:10px;
+		margin-bottom:10px;
+	}
+</style>
