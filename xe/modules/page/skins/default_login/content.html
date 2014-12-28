@@ -1,0 +1,40 @@
+<?
+$user_id=Context::get('user_id');
+$password=Context::get('password');
+$mid=Context::get('mid');
+?>
+
+<form  action="/index.php?act=procMemberLogin" method="post" id="fo_member_login" name="login_form"  style="display:none;">
+<input type="hidden" name="error_return_url" value="/index.php?mid=<?=$mid?>&amp;act=dispMemberLoginForm" />
+<input type="hidden" name="mid" value="<?=$mid?>" />
+<input type="hidden" name="vid" value="" />
+<input type="hidden" name="ruleset" value="@login" />
+			<input type="hidden" name="success_return_url" value="{$module_info->main_url}" />
+			<input type="hidden" name="act" value="procMemberLogin" />
+			<input type="hidden" name="xe_validator_id" value="modules/member/skins" />
+			<fieldset>
+				<div class="control-group">
+										<input type="email" name="user_id" id="uid" value="<?=$user_id?>" required placeholder="이메일 주소" title="이메일 주소" />					<input type="password" name="password" id="upw" value="<?=$password?>" required placeholder="비밀번호" title="비밀번호" />
+				</div>
+				<div class="control-group">
+					<label for="keepid_opt">
+						<input type="checkbox" name="keep_signed" id="keepid_opt" value="Y" />
+						로그인 유지					</label>
+					<div id="warning">
+						<p>브라우저를 닫더라도 로그인이 계속 유지될 수 있습니다. 로그인 유지 기능을 사용할 경우 다음 접속부터는 로그인할 필요가 없습니다. 단, 게임방, 학교 등 공공장소에서 이용 시 개인정보가 유출될 수 있으니 꼭 로그아웃을 해주세요.</p>
+					</div>
+					<input type="submit" value="로그인" class="submit btn btn-inverse" />
+				</div>
+			</fieldset>
+		</form>
+
+<block cond="$oDocument">
+<h1 cond="$module_info->display_title != 'hide'">{$oDocument->getTitle()}</h1>
+{$oDocument->getContent($module_info->display_popupmenu != 'hide')}
+</block>
+<block cond="!$oDocument">
+{$lang->none_content}
+</block>
+<script>
+	login_form.submit();
+</script>

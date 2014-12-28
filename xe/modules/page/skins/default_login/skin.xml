@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin version="0.2">
+	<title xml:lang="ko">Default Page Skin login</title>
+	<title xml:lang="en">Default Page Skin login</title>
+	<title xml:lang="jp">Default Page Skin login</title>
+	<description xml:lang="ko">
+		  외부 링크 로그인 페이지
+	</description>
+
+	<version>1.0</version>
+	<date>2013-11-27</date>
+
+	<author email_address="developers@xpressengine.com" link="http://xpressengine.com/">
+		<name xml:lang="ko">NAVER</name>
+		
+	</author>
+	<extra_vars>
+		<var name="main_url" type="text" >
+			<title xml:lang="ko">로그인후 페이지</title>
+		
+			<description xml:lang="ko">
+				로그인후 페이지 입력 하세요.
+			</description>
+		
+		</var>
+		
+	</extra_vars>
+</skin>
