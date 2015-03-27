@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* Clearfix */
+.newclearfix:after{clear:both; content:' '; display:block; font-size:0; height:0; line-height:0; visibility:hidden; width:0}
+* html .newclearfix,:first-child+html .newclearfix{zoom:1}
+
+/* a */
+.gardenSlider a,
+.gardenSlider a:hover{text-decoration:none}
+.gardenSlider img,
+.gardenSlider iframe{vertical-align:middle}
+
+/*--[ WIDGET ]--*/
+.gardenSlider .bx-wrapper{position:relative; margin:0 auto; padding:0; *zoom:1}
+.gardenSlider .bx-wrapper img{width:100%}
+.gardenSlider .bxslider{margin:0; padding:0; list-style:none; width:10000em}
+.gardenSlider .bxslider li{float:left; margin:0; padding:0}
+.gardenSlider .bx-wrapper .bx-viewport{z-index:1}
+.gardenSlider .bx-wrapper .bx-controls .bx-pager{z-index:2}
+.gardenSlider .bx-wrapper .bx-pager,
+.gardenSlider .bx-wrapper .bx-controls-auto{position:absolute; bottom:20px; width:100%}
+
+/* LOADER */
+.gardenSlider .bx-wrapper .bx-loading{min-height:50px; background:url(../img/bx_loader.gif) center center no-repeat #fff; height:100%; width:100%; position:absolute; top:0; left:0; z-index:2000}
+
+/* PAGER */
+.gardenSlider .bx-wrapper .bx-pager{padding-top:20px; text-align:center; font-size:.85em; font-family:Arial; font-weight:bold; color:#666}
+.gardenSlider .bx-wrapper .bx-pager .bx-pager-item,
+.gardenSlider .bx-wrapper .bx-controls-auto .bx-controls-auto-item{display:inline-block; *zoom:1; *display:inline}
+.gardenSlider .bx-wrapper .bx-pager.bx-default-pager a{display:block; width:12px; height:12px; margin:0 5px; background:#fff; background:rgba(255,255,255,.6); -moz-border-radius:100%; -o-border-radius:100%; -webkit-border-radius:100%; border-radius:100%; -moz-box-shadow:0 0 2px rgba(0,0,0,.2); -o-box-shadow:0 0 2px rgba(0,0,0,.2); -webkit-box-shadow:0 0 2px rgba(0,0,0,.2); box-shadow:0 0 2px rgba(0,0,0,.2); text-indent:-9999px; outline:0}
+.gardenSlider .bx-wrapper .bx-pager.bx-default-pager a:hover{background:#fff; background:rgba(255,255,255,.8)}
+.gardenSlider .bx-wrapper .bx-pager.bx-default-pager a.active{background:#fff}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+.gardenSlider .bx-wrapper .bx-controls-direction{display:none}
+.gardenSlider .bx-wrapper:hover .bx-controls-direction{display:block}
+.gardenSlider .bx-wrapper .bx-controls-direction{position:absolute; width:100%; top:50%; margin-top:-33px; left:0}
+.gardenSlider .bx-wrapper .bx-controls-direction a{position:absolute; width:38px; height:67px; background:#f8f8f8 url(../img/arrows.png) no-repeat 0 16px; background:rgba(255,255,255,.8) url(../img/arrows.png) no-repeat 0 16px; text-indent:-9999px; overflow:hidden; z-index:9999; outline:0}
+.gardenSlider .bx-wrapper .bx-controls-direction a.disabled{display:none}
+.gardenSlider .bx-wrapper .bx-controls-direction .bx-prev{left:0}
+.gardenSlider .bx-wrapper .bx-controls-direction .bx-prev:hover{background-position:-36px 16px}
+.gardenSlider .bx-wrapper .bx-controls-direction .bx-next{right:0; background-position:-70px 16px}
+.gardenSlider .bx-wrapper .bx-controls-direction .bx-next:hover{background-position:-106px 16px}
+.gardenSlider .bx-wrapper .bx-controls-direction .bx-prev:hover,
+.gardenSlider .bx-wrapper .bx-controls-direction .bx-next:hover{background-color:#bbb}
+
+/* AUTO CONTROLS (START / STOP) */
+.gardenSlider .gardenSlider .bx-wrapper .bx-controls-auto{text-align:center}
+.gardenSlider .gardenSlider .bx-wrapper .bx-controls-auto .bx-start{display:block; text-indent:-9999px; width:10px; height:11px; outline:0; background:url(../img/controls.png) -86px -11px no-repeat; margin:0 3px}
+.gardenSlider .gardenSlider .bx-wrapper .bx-controls-auto .bx-start:hover,
+.gardenSlider .gardenSlider .bx-wrapper .bx-controls-auto .bx-start.active{background-position:-86px 0}
+.gardenSlider .gardenSlider .bx-wrapper .bx-controls-auto .bx-stop{display:block; text-indent:-9999px; width:9px; height:11px; outline:0; background:url(../img/controls.png) -86px -44px no-repeat; margin:0 3px}
+.gardenSlider .gardenSlider .bx-wrapper .bx-controls-auto .bx-stop:hover,
+.gardenSlider .gardenSlider .bx-wrapper .bx-controls-auto .bx-stop.active{background-position:-86px -33px}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+.gardenSlider .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager{text-align:left; width:80%}
+.gardenSlider .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto{right:0; width:35px}
+
+/* IMAGE CAPTIONS */
+.gardenSlider .bx-wrapper .bx-caption{position:absolute; top:33%; left:50%; margin-left:-25%; width:50%; text-align:center}
+.gardenSlider .bx-wrapper .bx-caption > span{display:block}
+.gardenSlider .bx-wrapper .bx-caption h1{margin:0; padding:0; font-family:'Nanum Gothic','Malgun Gothic',돋움,sans-serif; font-weight:700; font-size:36px; color:#fff}
+.gardenSlider .bx-wrapper .bx-caption h2{margin:10px 0 0 0; padding:0; font-family:'Nanum Gothic','Malgun Gothic',돋움,sans-serif; font-weight:700; font-size:13px; color:#fff}
+
+@media screen and (max-width:767px){
+	.gardenSlider .bx-wrapper .bx-pager,.bx-wrapper .bx-controls-auto{bottom:5px}
+	.gardenSlider .bx-wrapper .bx-caption{top:10%; margin-left:-33%; width:67%}
+	.gardenSlider .bx-wrapper .bx-caption h1{font-size:16px}
+	.gardenSlider .bx-wrapper .bx-caption h2{font-size:11px}
+}
+
+@media screen and (max-width:479px){
+	.gardenSlider .bx-controls-direction{display:none}
+}

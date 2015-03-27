@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* Clearfix */
+.newclearfix:after{clear:both; content:' '; display:block; font-size:0; height:0; line-height:0; visibility:hidden; width:0}
+* html .newclearfix,:first-child+html .newclearfix{zoom:1}
+
+/* a */
+.garden_webzine a,
+.garden_webzine a > *{text-decoration:none; -webkit-transition:background-color .1s ease, border .1s ease, color .1s ease, opacity .1s ease-in-out; -moz-transition:background-color .1s ease, border .1s ease, color .1s ease, opacity .1s ease-in-out; -ms-transition:background-color .1s ease, border .1s ease, color .1s ease, opacity .1s ease-in-out; -o-transition:background-color .1s ease, border .1s ease, color .1s ease, opacity .1s ease-in-out; transition:background-color .1s ease, border .1s ease, color .1s ease, opacity .1s ease-in-out}
+.garden_webzine a:hover{text-decoration:none}
+.garden_webzine img,
+.garden_webzine iframe{vertical-align:middle}
+
+/*--[ WIDGET ]--*/
+.garden_webzine-container{margin:0; padding:0}
+.garden_webzine{margin:0; padding:0; list-style:none}
+.garden_webzine li{margin:0; padding:8px 0; *padding:7px 0}
+.garden_webzine li:first-child{padding-top:0}
+.garden_webzine li.li-last{padding-bottom:1px}
+.garden_webzine li:last-child{padding-bottom:1px}
+.garden_webzine li a{display:block; color:#5c5c5c; outline:none}
+.garden_webzine li a:hover{text-decoration:none}
+.garden_webzine li .webzine_thumb{position:relative; float:left; margin-right:10px}
+.garden_webzine li .webzine_thumb span.noimage{position:absolute; display:block; background-color:#f8f8f8; border:1px solid #efefef; text-align:center; font-size:21px}
+.garden_webzine li .webzine_thumb span.noimage i{color:#e9e9e9}
+.garden_webzine li h3.title{margin:0 0 12px; padding:0; font-family:'Nanum Gothic','Malgun Gothic',돋움,sans-serif; font-weight:400; font-size:12px; color:#666}
+.garden_webzine li p{margin:0; padding:0; line-height:1.5; font-family:돋움,sans-serif; font-size:11px; color:#5c5c5c}
+.garden_webzine li .category{color:#3aa6d8}
+.garden_webzine li span{display:block; font-family:돋움,sans-serif; font-size:11px; color:#808080}
+.garden_webzine li span i{color:#3aa6d8}
+.garden_webzine li .date{margin-top:4px; color:#3aa6d8}
+.garden_webzine li .ext{margin-top:4px}
+.garden_webzine li .summary{margin-top:8px; color:#808080}
+.garden_webzine li a:hover h3.title,
+.garden_webzine li a:focus h3.title{color:#3aa6d8}
+.garden_webzine li a:hover h3.title strong,
+.garden_webzine li a:focus h3.title strong{letter-spacing:0}
+
+.x #zonePageContent .garden_webzine{margin:0; padding:0}
+.x #zonePageContent .garden_webzine li{margin:0; padding:16px 0; line-height:1.2}
+.x #zonePageContent .garden_webzine li:last-child{padding-bottom:0; border-bottom:0}

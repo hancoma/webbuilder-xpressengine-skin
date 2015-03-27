@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget version="0.2">
+    <title xml:lang="ko">카메론 소개용 위젯</title>
+    <description xml:lang="ko">소개용 전용 위젯</description>
+    <version>1.0</version>
+    <date>2014-04-08</date>
+
+    <author email_address="mail@cameron.co.kr" link="http://cameron.co.kr/">
+        <name xml:lang="ko">CAMERON</name>
+    </author>
+
+    <extra_vars>
+		<group>
+			<title xml:lang="ko">사용자 컬러셋</title>
+			<var id="cheight">
+				<type>text</type>
+				<name xml:lang="ko">세로사이즈</name>
+				<description xml:lang="ko">기본 150(px) ※ 숫자만 입력하세요.</description>
+			</var>
+		</group>
+	
+		<group>
+			<title xml:lang="ko">내용1</title>
+			<var id="c1_title">
+				<type>text</type>
+				<name xml:lang="ko">제목</name>
+			</var>
+			<var id="c1_desc">
+				<type>textarea</type>
+				<name xml:lang="ko">설명</name>
+				<description xml:lang="ko">줄바꿈은 엔터치세요.</description>
+			</var>
+			<var id="c1_image">
+				<type>filebox</type>
+				<name xml:lang="ko">아이콘이미지</name>
+			</var>
+			<var id="c1_icon">
+				<type>text</type>
+				<name xml:lang="ko">폰트어썸 아이콘명</name>
+				<description xml:lang="ko">예) fa-desktop ＊폰트어썸 코드표(http://fontawesome.io/icons/)에 있는 아이콘 이름을 입력하세요. 아이콘 이미지가 없을 경우에 사용합니다.</description>
+			</var>
+			<var id="c1_iconsize">
+				<type>text</type>
+				<name xml:lang="ko">폰트어썸 아이콘 사이즈</name>
+				<description xml:lang="ko">예) 32 (단위px) 숫자만 입력하세요. 입력하지 않으면 각 스킨의 기본 크기로 지정됩니다.</description>
+			</var>
+			<var id="c1_color">
+				<type>text</type>
+				<name xml:lang="ko">컬러</name>
+				<description xml:lang="ko">예) #469fea</description>
+			</var>
+			<var id="c1_link">
+				<type>text</type>
+				<name xml:lang="ko">링크주소</name>
+				<description xml:lang="ko">예) http://cameron.co.kr</description>
+			</var>
+			<var id="c1_blank">
+				<type>select</type>
+				<name xml:lang="ko">새창으로 열기</name>
+				<options>
+					<value>self</value>
+					<name xml:lang="ko">현재창에서 열기</name>
+				</options>
+				<options>
+					<value>blank</value>
+					<name xml:lang="ko">새창으로 열기</name>
+				</options>
+			</var>
+		</group>
+
+		<group>
+			<title xml:lang="ko">내용2</title>
+			<var id="c2_title">
+				<type>text</type>
+				<name xml:lang="ko">제목</name>
+			</var>
+			<var id="c2_desc">
+				<type>textarea</type>
+				<name xml:lang="ko">설명</name>
+			</var>
+			<var id="c2_image">
+				<type>filebox</type>
+				<name xml:lang="ko">아이콘이미지</name>
+			</var>
+			<var id="c2_icon">
+				<type>text</type>
+				<name xml:lang="ko">폰트어썸 아이콘명</name>
+			</var>
+			<var id="c2_iconsize">
+				<type>text</type>
+				<name xml:lang="ko">폰트어썸 아이콘 사이즈</name>
+			</var>
+			<var id="c2_color">
+				<type>text</type>
+				<name xml:lang="ko">컬러</name>
+			</var>
+			<var id="c2_link">
+				<type>text</type>
+				<name xml:lang="ko">링크주소</name>
+			</var>
+			<var id="c2_blank">
+				<type>select</type>
+				<name xml:lang="ko">새창으로 열기</name>
+				<options>
+					<value>self</value>
+					<name xml:lang="ko">현재창에서 열기</name>
+				</options>
+				<options>
+					<value>blank</value>
+					<name xml:lang="ko">새창으로 열기</name>
+				</options>
+			</var>
+		</group>
+
+		<group>
+			<title xml:lang="ko">내용3</title>
+			<var id="c3_title">
+				<type>text</type>
+				<name xml:lang="ko">제목</name>
+			</var>
+			<var id="c3_desc">
+				<type>textarea</type>
+				<name xml:lang="ko">설명</name>
+			</var>
+			<var id="c3_image">
+				<type>filebox</type>
+				<name xml:lang="ko">아이콘이미지</name>
+			</var>
+			<var id="c3_icon">
+				<type>text</type>
+				<name xml:lang="ko">폰트어썸 아이콘명</name>
+			</var>
+			<var id="c3_iconsize">
+				<type>text</type>
+				<name xml:lang="ko">폰트어썸 아이콘 사이즈</name>
+			</var>
+			<var id="c3_color">
+				<type>text</type>
+				<name xml:lang="ko">컬러</name>
+			</var>
+			<var id="c3_link">
+				<type>text</type>
+				<name xml:lang="ko">링크주소</name>
+			</var>
+			<var id="c3_blank">
+				<type>select</type>
+				<name xml:lang="ko">새창으로 열기</name>
+				<options>
+					<value>self</value>
+					<name xml:lang="ko">현재창에서 열기</name>
+				</options>
+				<options>
+					<value>blank</value>
+					<name xml:lang="ko">새창으로 열기</name>
+				</options>
+			</var>
+		</group>
+
+		<group>
+			<title xml:lang="ko">내용4</title>
+			<var id="c4_title">
+				<type>text</type>
+				<name xml:lang="ko">제목</name>
+			</var>
+			<var id="c4_desc">
+				<type>textarea</type>
+				<name xml:lang="ko">설명</name>
+			</var>
+			<var id="c4_image">
+				<type>filebox</type>
+				<name xml:lang="ko">아이콘이미지</name>
+			</var>
+			<var id="c4_icon">
+				<type>text</type>
+				<name xml:lang="ko">폰트어썸 아이콘명</name>
+			</var>
+			<var id="c4_iconsize">
+				<type>text</type>
+				<name xml:lang="ko">폰트어썸 아이콘 사이즈</name>
+			</var>
+			<var id="c4_color">
+				<type>text</type>
+				<name xml:lang="ko">컬러</name>
+			</var>
+			<var id="c4_link">
+				<type>text</type>
+				<name xml:lang="ko">링크주소</name>
+			</var>
+			<var id="c4_blank">
+				<type>select</type>
+				<name xml:lang="ko">새창으로 열기</name>
+				<options>
+					<value>self</value>
+					<name xml:lang="ko">현재창에서 열기</name>
+				</options>
+				<options>
+					<value>blank</value>
+					<name xml:lang="ko">새창으로 열기</name>
+				</options>
+			</var>
+		</group>
+
+    </extra_vars>
+</widget>

@@ -1,0 +1,85 @@
+<!--@if(Mobile::isMobileCheckByAgent() || Mobile::isMobilePadCheckByAgent())-->{@ $easing = 'easeOutBack'; $speed = 300}<!--@else-->{@ $easing = 'swing'; $speed = 200}<!--@endif-->
+
+<load target="css/garden_webzine.css" />
+<load cond="!$global['bxslider']" target="js/jquery.bxslider.min.js" type="body" />
+{@ $__Context->global['bxslider'] = 1}
+
+<!--@if(!$global['csi'])-->{@ $__Context->global['csi'] = 1}<!--@endif-->{@ $__Context->global['csi']++}
+
+<style cond="$widget_info->cs_color" type="text/css">
+#bxslider{$global['csi']} .garden_webzine li .category{color:{$widget_info->cs_color}}
+#bxslider{$global['csi']} .garden_webzine li span i{color:{$widget_info->cs_color}}
+#bxslider{$global['csi']} .garden_webzine li .date{color:{$widget_info->cs_color}}
+#bxslider{$global['csi']} .garden_webzine li a:hover h3.title,
+#bxslider{$global['csi']} .garden_webzine li a:focus h3.title{color:{$widget_info->cs_color}}
+</style>
+
+<div id="bxslider{$global['csi']}" class="garden_webzine-container newclearfix">
+	{@ $listi = 0}
+	<block loop="$widget_info->content_items=>$key,$item">
+		<block cond="$listi%$widget_info->list_count == 0"><ul class="garden_webzine" style="display:none"|cond="$listi+1>$widget_info->page_count"></block>
+			<li class="<!--@if(($listi+1)%$widget_info->list_count==0)-->li-last <!--@endif-->newclearfix">
+				<a class="newclearfix" href="{$item->getLink()}" target="_blank"|cond="$widget_info->new_window" >
+					<div class="webzine_thumb" style="width:{$widget_info->thumbnail_width}px; height:{$widget_info->thumbnail_height}px">
+						<img cond="$item->getthumbnail()" src="{$item->getthumbnail()}" alt="" />
+						<span cond="!$item->getthumbnail()" class="noimage" style="width:{$widget_info->thumbnail_width-2}px; height:{$widget_info->thumbnail_height-2}px; line-height:{$widget_info->thumbnail_height-2}px"><i class="fa fa-camera icon-camera"></i></span>
+					</div>
+		
+					<block loop="$widget_info->option_view_arr=>$k,$v">
+						<!--@if($v=='title')-->
+							<h3 class="title">
+								<strong cond="$widget_info->show_category=='Y' && $item->get('category_srl')" class="category">[{$item->getCategory()}] </strong>
+								{strip_tags($item->getTitle($widget_info->subject_cut_size))}
+							</h3>
+						<!--@else if($v=='nickname')-->
+							<span class="author"><i class="fa fa-user icon-user" style="font-size:13px"></i> {$item->getNickName()}</span>
+						<!--@else if($v=='comment_count')-->
+							<span class="replyNum"><i class="fa fa-comments icon-comments" style="font-size:14px"></i> <!--@if(!$item->getCommentCount())-->0<!--@endif-->{$item->getCommentCount()}</span>
+						<!--@else if($v=='voted_count')-->
+							<span class="voteNum"><i class="fa fa-thumbs-o-up icon-thumbs-up-alt" style="font-size:14px"></i> {$item->getVotedCount()}</span>
+						<!--@else if($v=='regdate')-->
+							<p class="date">{$item->getRegdate("Y-m-d")} {$item->getRegdate("H:i")}</p>
+						<!--@else if($v=='extravar')-->
+							<p class="ext">{$item->getExtraVar()}</p>
+						<!--@endif-->
+					</block>
+				</a>
+			</li>
+	{@ $listi++}
+	<block cond="$listi%$widget_info->list_count == 0"></ul></block>
+	</block>
+	<block cond="$listi%$widget_info->list_count != 0"></ul></block>
+</div>
+
+<script cond="$widget_info->page_count>1">
+jQuery(document).ready(function($){
+	var $slider = $('#bxslider{$global["csi"]}'),
+		$garden_webzine = $slider.find('.garden_webzine'),
+		$ws = $('#garden_islide{$global["csi"]}');
+
+	if($ws.is(':visible')) {
+		var wsNext = '#image{$global["csi"]}Next',
+			wsPrev = '#image{$global["csi"]}Prev';
+	} else {
+		var wsNext = null,
+			wsPrev = null;
+	}
+
+	$slider.bxSlider({
+		speed: {$speed},
+		easing: '{$easing}',
+		infiniteLoop: false,
+		pager: false,
+		nextText: '',
+		prevText: '',
+		nextSelector: wsNext,
+		prevSelector: wsPrev,
+		hideControlOnEnd: true,
+		useCSS: false,
+		touchEnabled: true,
+		oneToOneTouch: true
+	});
+	
+	$garden_webzine.css('display','block');
+});
+</script>

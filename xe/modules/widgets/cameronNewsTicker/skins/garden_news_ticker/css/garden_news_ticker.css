@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* Clearfix */
+.newclearfix:after{clear:both; content:' '; display:block; font-size:0; height:0; line-height:0; visibility:hidden; width:0}
+* html .newclearfix,:first-child+html .newclearfix{zoom:1}
+
+/*--[ WIDGET ]--*/
+.garden_news_ticker ul{margin:0; padding:0; list-style:none}
+.garden_news_ticker li{height:25px; margin:0; padding:7px 0}
+.garden_news_ticker a{display:block; line-height:1.3; font-family:'Nanum Gothic','Malgun Gothic',돋움,sans-serif; font-weight:400; font-size:13px; color:#333; text-decoration:none}
+.garden_news_ticker a:hover,
+.garden_news_ticker a:focus{color:#3aa6d8}
+.garden_news_ticker p{margin:0; padding:0; line-height:1.3}
+.garden_news_ticker .category{float:left; margin-right:10px; padding:4px 12px; background-color:#3aa6d8; color:#fff}
+.garden_news_ticker .title{float:left; padding:4px 0}
+.garden_news_ticker .info{float:right; margin-right:40px; padding:4px 0}
+.garden_news_ticker .date{font-family:Verdana; color:#3aa6d8}
+
+.garden_news_ticker .bx-wrapper{position:relative; margin:0 auto; padding:0}
+.garden_news_ticker .bx-wrapper .bx-controls-direction a{position:absolute; right:0; width:18px; height:18px; background-color:#fff; border:1px solid #ddd; overflow:hidden; z-index:9999; outline:0}
+.garden_news_ticker .bx-wrapper .bx-controls-direction a:after{content:' '; position:absolute; top:50%; left:50%; margin-left:-4px; display:block; width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent}
+.garden_news_ticker .bx-wrapper .bx-controls-direction a:hover,
+.garden_news_ticker .bx-wrapper .bx-controls-direction a:focus{background-color:#3aa6d8; border-color:#3aa6d8}
+.garden_news_ticker .bx-wrapper .bx-controls-direction .bx-prev{top:0}
+.garden_news_ticker .bx-wrapper .bx-controls-direction .bx-prev:after{margin-top:-2px; border-bottom:5px solid #3aa6d8}
+.garden_news_ticker .bx-wrapper .bx-has-controls-direction .bx-controls-direction .bx-prev:hover:after,
+.garden_news_ticker .bx-wrapper .bx-has-controls-direction .bx-controls-direction .bx-prev:focus:after{border-bottom-color:#fff}
+.garden_news_ticker .bx-wrapper .bx-controls-direction .bx-next{top:19px}
+.garden_news_ticker .bx-wrapper .bx-controls-direction .bx-next:after{margin-top:-3px; border-top:5px solid #3aa6d8}
+.garden_news_ticker .bx-wrapper .bx-has-controls-direction .bx-controls-direction .bx-next:hover:after,
+.garden_news_ticker .bx-wrapper .bx-has-controls-direction .bx-controls-direction .bx-next:focus:after{border-top-color:#fff}
+
+@media screen and (max-width:767px){
+	.garden_news_ticker .info{display:none}
+}

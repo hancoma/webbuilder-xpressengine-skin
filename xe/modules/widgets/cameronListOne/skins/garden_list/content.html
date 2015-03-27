@@ -1,0 +1,67 @@
+<!--@if(Mobile::isMobileCheckByAgent() || Mobile::isMobilePadCheckByAgent())-->{@ $easing = 'easeOutBack'; $speed = 300}<!--@else-->{@ $easing = 'swing'; $speed = 200}<!--@endif-->
+
+<load target="css/garden_list.css" />
+<load cond="!$global['bxslider']" target="js/jquery.bxslider.min.js" type="body" />
+{@ $__Context->global['bxslider'] = 1}
+
+<!--@if(!$global['csi'])-->{@ $__Context->global['csi'] = 1}<!--@endif-->{@ $__Context->global['csi']++}
+
+<style cond="$widget_info->cs_color" type="text/css">
+#bxslider{$global['csi']} .garden_list li a:hover p.listTitle,
+#bxslider{$global['csi']} .garden_list li a:focus p.listTitle{color:{$widget_info->cs_color}}
+</style>
+
+<div id="bxslider{$global['csi']}" class="newclearfix">
+	{@ $listi = 0}
+	<block loop="$widget_info->content_items=>$key,$item">
+		<block cond="$listi%$widget_info->list_count == 0"><ul class="garden_list" style="display:none"|cond="$listi+1>$widget_info->page_count"></block>
+			<li class="<!--@if(($listi+1)%$widget_info->list_count==0)-->li-last <!--@endif-->newclearfix">
+				<a class="newclearfix" href="{$item->getLink()}">
+					<p class="listTitle">
+						<!--@if($widget_info->show_category=='Y')-->
+							<span class="category cate{$listi%6}"><!--@if($item->get('category_srl'))-->{$item->getCategory()}<!--@else-->{$item->getBrowserTitle()}<!--@endif--></span>
+						<!--@else-->
+							<span class="list-arrow arrow{$listi%6}"></span>
+						<!--@endif-->
+						<span class="title">{strip_tags($item->getTitle($widget_info->subject_cut_size))}</span>
+					</p>
+				</a>
+			</li>
+		{@ $listi++}
+	<block cond="$listi%$widget_info->list_count == 0"></ul></block>
+	</block>
+	<block cond="$listi%$widget_info->list_count != 0"></ul></block>
+</div>
+
+<script cond="$widget_info->page_count>1">
+jQuery(document).ready(function($){
+	var $slider = $('#bxslider{$global["csi"]}'),
+		$garden_list = $slider.find('.garden_list'),
+		$ws = $('#garden_islide{$global["csi"]}');
+
+	if($ws.is(':visible')) {
+		var wsNext = '#image{$global["csi"]}Next',
+			wsPrev = '#image{$global["csi"]}Prev';
+	} else {
+		var wsNext = null,
+			wsPrev = null;
+	}
+
+	$slider.bxSlider({
+		speed: {$speed},
+		easing: '{$easing}',
+		infiniteLoop: false,
+		pager: false,
+		nextText: '',
+		prevText: '',
+		nextSelector: wsNext,
+		prevSelector: wsPrev,
+		hideControlOnEnd: true,
+		useCSS: false,
+		touchEnabled: true,
+		oneToOneTouch: true
+	});
+	
+	$garden_list.css('display','block');
+});
+</script>

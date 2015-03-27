@@ -1,0 +1,5 @@
+<!--%import("css/style.css")-->
+<a cond="$widget_info->link_extra_idx" href="{$document->getExtraValue($widget_info->link_extra_idx)}" target="_blank"|cond="$widget_info->link_new_window=='Y'"><img class="vannerImage" src="{$document->getThumbnail($widget_info->thumbnail_width, $widget_info->thumbnail_height, $widget_info->thumbnail_type)}" /></a>
+<!--@if(!$widget_info->link_extra_idx)-->
+<img class="vannerImage" src="{$document->getThumbnail($widget_info->thumbnail_width, $widget_info->thumbnail_height, $widget_info->thumbnail_type)}" />
+<!--@end-->

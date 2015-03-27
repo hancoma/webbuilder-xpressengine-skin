@@ -1,0 +1,187 @@
+<!--@if(Mobile::isMobileCheckByAgent() || Mobile::isMobilePadCheckByAgent())-->{@ $easing = 'easeOutBack'; $speed = 300}<!--@else-->{@ $easing = 'swing'; $speed = 200}<!--@endif-->
+
+<!--@if(!$global['cbrowser'])-->
+{@ $browser_type = getenv("HTTP_USER_AGENT")}
+<!--@if(preg_match("/MSIE 8.0/",$browser_type))-->{@ $IE='8'; $oldIE='1'}<!--@else if(preg_match("/MSIE 7.0/",$browser_type))-->{@ $IE='7'; $oldIE='1'}<!--@else if(preg_match("/MSIE 6.0/",$browser_type))-->{@ $IE='6'; $oldIE='1'}<!--@endif-->
+{@ $__Context->global['cbrowser'] = 1}
+<!--@endif-->
+
+<!--@if(!$global['fonta'])-->
+	<!--@if($IE!='7')--><load target="css/font-awesome.min.css" /><!--@else--><load target="ie7/font-awesome.min.css" /><load target="ie7/font-awesome-ie7.min.css" /><!--@endif-->
+	{@ $__Context->global['fonta'] = 1}
+<!--@endif-->
+<!--@if($IE=='7')-->
+	<!--@if($widget_info->c1_icon)-->{@ $widget_info->c1_icon = str_replace("fa", "icon", $widget_info->c1_icon);}<!--@endif-->
+	<!--@if($widget_info->c2_icon)-->{@ $widget_info->c2_icon = str_replace("fa", "icon", $widget_info->c2_icon);}<!--@endif-->
+	<!--@if($widget_info->c3_icon)-->{@ $widget_info->c3_icon = str_replace("fa", "icon", $widget_info->c3_icon);}<!--@endif-->
+	<!--@if($widget_info->c4_icon)-->{@ $widget_info->c4_icon = str_replace("fa", "icon", $widget_info->c4_icon);}<!--@endif-->
+<!--@endif-->
+
+<load target="css/garden_panel.css" />
+<load cond="!$global['bxslider']" target="js/jquery.bxslider.min.js" type="body" />
+{@ $__Context->global['bxslider'] = 1}
+
+<!--@if(!$global['csi'])-->{@ $__Context->global['csi'] = 1}<!--@endif-->{@ $__Context->global['csi']++}
+
+<div id="garden_panel{$global['csi']}" class="garden_panel newclearfix">
+	<ul id="panel{$global['csi']}">
+		{@ $i = 0}
+		<li cond="$widget_info->c1_title" class="panel1 newclearfix">
+			<div class="contBox">
+				<a <!--@if($widget_info->c1_link=='#')-->class="nolink" onClick="return false;"<!--@else-->href="{$widget_info->c1_link}" target="_{$widget_info->c1_blank}"<!--@endif--> style="height:{$widget_info->cheight}px"|cond="$widget_info->cheight">
+					<h3 class="title">{$widget_info->c1_title}</h3>
+					<p class="summary">{nl2br($widget_info->c1_desc)}</p>
+					<!--@if($widget_info->c1_image)-->
+						<img src="{$widget_info->c1_image}" />
+					<!--@elseif($widget_info->c1_icon)-->
+						<i class="fa {$widget_info->c1_icon}" style="<!--@if($widget_info->c1_iconsize)-->font-size:{$widget_info->c1_iconsize}px<!--@endif--><!--@if($widget_info->c1_color)-->; color:{$widget_info->c1_color}<!--@endif-->"></i>
+					<!--@endif-->
+				</a>
+			</div>
+			{@ $i++}
+		</li>
+		<li cond="$widget_info->c2_title" class="panel2 newclearfix">
+			<div class="contBox">
+				<a <!--@if($widget_info->c2_link=='#')-->class="nolink" onClick="return false;"<!--@else-->href="{$widget_info->c2_link}" target="_{$widget_info->c2_blank}"<!--@endif--> style="height:{$widget_info->cheight}px"|cond="$widget_info->cheight">
+					<h3 class="title">{$widget_info->c2_title}</h3>
+					<p class="summary">{nl2br($widget_info->c2_desc)}</p>
+					<!--@if($widget_info->c2_image)-->
+						<img src="{$widget_info->c2_image}" />
+					<!--@elseif($widget_info->c2_icon)-->
+						<i class="fa {$widget_info->c2_icon}" style="<!--@if($widget_info->c2_iconsize)-->font-size:{$widget_info->c2_iconsize}px<!--@endif--><!--@if($widget_info->c2_color)-->; color:{$widget_info->c2_color}<!--@endif-->"></i>
+					<!--@endif-->
+				</a>
+			</div>
+			{@ $i++}
+		</li>
+		<li cond="$widget_info->c3_title" class="panel3 newclearfix">
+			<div class="contBox">
+				<a <!--@if($widget_info->c3_link=='#')-->class="nolink" onClick="return false;"<!--@else-->href="{$widget_info->c3_link}" target="_{$widget_info->c3_blank}"<!--@endif--> style="height:{$widget_info->cheight}px"|cond="$widget_info->cheight">
+					<h3 class="title">{$widget_info->c3_title}</h3>
+					<p class="summary">{nl2br($widget_info->c3_desc)}</p>
+					<!--@if($widget_info->c3_image)-->
+						<img src="{$widget_info->c3_image}" />
+					<!--@elseif($widget_info->c3_icon)-->
+						<i class="fa {$widget_info->c3_icon}" style="<!--@if($widget_info->c3_iconsize)-->font-size:{$widget_info->c3_iconsize}px<!--@endif--><!--@if($widget_info->c3_color)-->; color:{$widget_info->c3_color}<!--@endif-->"></i>
+					<!--@endif-->
+				</a>
+			</div>
+			{@ $i++}
+		</li>
+		<li cond="$widget_info->c4_title" class="panel4 newclearfix">
+			<div class="contBox">
+				<a <!--@if($widget_info->c4_link=='#')-->class="nolink" onClick="return false;"<!--@else-->href="{$widget_info->c4_link}" target="_{$widget_info->c4_blank}"<!--@endif--> style="height:{$widget_info->cheight}px"|cond="$widget_info->cheight">
+					<h3 class="title">{$widget_info->c4_title}</h3>
+					<p class="summary">{nl2br($widget_info->c4_desc)}</p>
+					<!--@if($widget_info->c4_image)-->
+						<img src="{$widget_info->c4_image}" />
+					<!--@elseif($widget_info->c4_icon)-->
+						<i class="fa {$widget_info->c4_icon}" style="<!--@if($widget_info->c4_iconsize)-->font-size:{$widget_info->c4_iconsize}px<!--@endif--><!--@if($widget_info->c4_color)-->; color:{$widget_info->c4_color}<!--@endif-->"></i>
+					<!--@endif-->
+				</a>
+			</div>
+			{@ $i++}
+		</li>
+	</ul>
+</div>
+<script>
+jQuery(function($){
+$(function(){
+	var $win_width = $(window).width(),
+		$garden_panel = $('#garden_panel{$global["csi"]}'),
+		$panel_width = $garden_panel.width(),
+		$panel = $('#panel{$global["csi"]}'),
+		paneli = {$i},
+		$item_width = $panel_width/paneli,
+		ppager = true;
+
+	if($panel_width < 481) {
+		icount = 1,
+		$item_width = $panel_width;
+	} else if($panel_width < 641) {
+		icount = 2,
+		$item_width = $panel_width/2;
+	} else if($panel_width < 769) {
+		icount = 3,
+		$item_width = $panel_width/3;
+	} else {
+		icount = 4,
+		ppager = false;
+	}
+
+	var gardenPanel = $panel.bxSlider({
+		mode: 'horizontal',
+		speed: {$speed},
+		easing: '{$easing}',
+		auto: false,
+		infiniteLoop: false,
+		pager: ppager,
+		controls: false,
+		hideControlOnEnd: true,
+		useCSS: false,
+		captions: false,
+		slideWidth: $item_width,
+		minSlides: 1,
+		maxSlides: icount,
+		moveSlides: icount,
+		slideMargin: 0,
+		touchEnabled: true,
+		oneToOneTouch: true
+	});
+
+
+	function checkMq() {
+		var $garden_panel = $('#garden_panel{$global["csi"]}'),
+			$panel_width = $garden_panel.width(),
+			paneli = {$i},
+			$item_width = $panel_width/paneli,
+			ppager = true;
+
+		if($panel_width < 481) {
+			icount = 1,
+			$item_width = $panel_width;
+		} else if($panel_width < 641) {
+			icount = 2,
+			$item_width = $panel_width/2;
+		} else if($panel_width < 769) {
+			icount = 3,
+			$item_width = $panel_width/3;
+		} else {
+			icount = 4,
+			ppager = false;
+		}
+
+		gardenPanel.reloadSlider({
+			mode: 'horizontal',
+			speed: {$speed},
+			easing: '{$easing}',
+			auto: false,
+			infiniteLoop: false,
+			pager: ppager,
+			controls: false,
+			hideControlOnEnd: true,
+			useCSS: false,
+			captions: false,
+			slideWidth: $item_width,
+			minSlides: 1,
+			maxSlides: icount,
+			moveSlides: icount,
+			slideMargin: 0,
+			touchEnabled: true,
+			oneToOneTouch: true
+		});
+	}
+	
+	$(window).on('resize', function(e) {
+		var $win_width = $(window).width();
+		window.resizeEvt;
+		$(window).resize(function() {
+			clearTimeout(window.resizeEvt);
+			window.resizeEvt = setTimeout(function() {
+				checkMq();
+			}, 150);
+		});
+	});
+});
+});
+</script>

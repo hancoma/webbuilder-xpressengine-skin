@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* Clearfix */
+.newclearfix:after{clear:both; content:' '; display:block; font-size:0; height:0; line-height:0; visibility:hidden; width:0}
+* html .newclearfix,:first-child+html .newclearfix{zoom:1}
+
+/* a */
+.garden_panel a,
+.garden_panel a > *{text-decoration:none; -webkit-transition:background-color .1s ease, border .1s ease, color .1s ease, opacity .1s ease-in-out; -moz-transition:background-color .1s ease, border .1s ease, color .1s ease, opacity .1s ease-in-out; -ms-transition:background-color .1s ease, border .1s ease, color .1s ease, opacity .1s ease-in-out; -o-transition:background-color .1s ease, border .1s ease, color .1s ease, opacity .1s ease-in-out; transition:background-color .1s ease, border .1s ease, color .1s ease, opacity .1s ease-in-out}
+.garden_panel a:hover{text-decoration:none}
+.garden_panel img,
+.garden_panel iframe{vertical-align:middle}
+
+/*--[ WIDGET ]--*/
+.garden_panel ul{margin:0; padding:0; list-style:none}
+.garden_panel li{float:left; margin:0; padding:0; border:1px solid #e9e9e9; border-right-color:#fff; font-family:'Nanum Gothic','Malgun Gothic',돋움,sans-serif}
+.garden_panel li:last-child{margin-right:0; border-right-color:#e9e9e9}
+.garden_panel li .contBox{width:100%}
+.garden_panel li a{position:relative; display:block; height:110px; overflow:hidden; padding:10px 20px; background-color:#fff; text-decoration:nonej; outline:none}
+.garden_panel li a:hover,
+.garden_panel li a:focus{background-image:url(../img/more.png); background-repeat:no-repeat; background-position:right top}
+.garden_panel li:hover a.nolink,
+.garden_panel li a.nolink:hover{background-image:none}
+
+.garden_panel li a h3,
+.garden_panel li a p{margin:0; padding:0; font-weight:400}
+.garden_panel li a h3{margin-top:7px; font-size:19px; color:#333}
+.garden_panel li a p{margin-top:17px; line-height:1.5; font-size:12px; color:#666}
+.garden_panel li a img{position:absolute; right:20px; bottom:12px}
+.garden_panel li a i{position:absolute; right:10px; bottom:10px; font-size:36px; color:#3aa6d8}
+
+/* PAGER */
+.garden_panel .bx-wrapper{position:relative; margin:0; padding:0; *zoom:1}
+.garden_panel .bx-wrapper .bx-pager{width:100%; margin-top:10px; text-align:center}
+.garden_panel .bx-wrapper .bx-pager .bx-pager-item,
+.garden_panel .bx-wrapper .bx-controls-auto .bx-controls-auto-item{display:inline-block; *display:inline; *zoom:1}
+.garden_panel .bx-wrapper .bx-pager.bx-default-pager a{display:block; width:11px; height:11px; margin:0 5px; background:#666; background:rgba(255,255,255,.6); -moz-border-radius:100%; -o-border-radius:100%; -webkit-border-radius:100%; border-radius:100%; -moz-box-shadow:0 0 2px rgba(0,0,0,.2); -o-box-shadow:0 0 2px rgba(0,0,0,.2); -webkit-box-shadow:0 0 2px rgba(0,0,0,.2); box-shadow:0 0 2px rgba(0,0,0,.2); text-indent:-9999px; outline:0}
+.garden_panel .bx-wrapper .bx-pager.bx-default-pager a:hover{background:#333; background:rgba(255,255,255,.8)}
+.garden_panel .bx-wrapper .bx-pager.bx-default-pager a.active{background:#fff}
+
+/* XE Fix */
+.x #zonePageContent .garden_panel{margin:0; padding:0}
