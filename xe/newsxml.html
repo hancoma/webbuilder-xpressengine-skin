@@ -1,0 +1,50 @@
+<? include "db_config.php"; 
+echo '<?xml version="1.0" encoding="utf-8"?>';
+	$data=@mysql_fetch_array(mysql_query("select * from xe_documents  where document_srl=$srl_no"));
+
+echo '<!DOCTYPE NEWS PUBLIC "-//view.daum.net//DTD NewsML 1.1//EN" "http://cp.news.search.daum.net/resources/dtd/newsxml-1.1.dtd">';
+?>
+<NEWS ver="1.1" act="C" orgid="182629">
+<DATETIME><?=$data[regdate]?></DATETIME>
+<WRITER_LIST>
+<WRITER>
+<NAME><![CDATA[<?=$data[regdate]?>]]></NAME>
+<EMAIL><?=$data[email_address]?></EMAIL>
+</WRITER>
+</WRITER_LIST>
+<CATEGORY_LIST>
+<CODE>soccer</CODE>
+</CATEGORY_LIST>
+<TITLE><![CDATA[FIA, 2009시즌 F1 그랑프리 공식 일정 발표]]></TITLE>
+<SUB_TITLE><![CDATA[작은 제목]]></SUB_TITLE>
+<TEXT><![CDATA[올시즌 보다 2경기 줄어 17경기 소화…프랑스, 캐나다 포기의사 밝혀 2009시즌 F1 그랑프리 공식 일정이
+확정됐다.]]>
+</TEXT>
+<IMG_LIST>
+<IMG>
+<URL><![CDATA[http://이미지가/있는/서버/주소/1342968.jpg]]></URL>
+<DESC><![CDATA[이미지 설명]]></DESC>
+</IMG>
+<IMG>
+<URL><![CDATA[http://이미지가/있는/서버/주소/1342968.jpg]]></URL>
+<DESC><![CDATA[이미지 설명]]></DESC>
+</IMG>
+</IMG_LIST>
+<VOD_LIST>
+<VOD><![CDATA[http://동영상이/있는/서버/주소/20070201_13.wmv]]></VOD>
+</VOD_LIST>
+<EXT>
+<OUTLINK><![CDATA[http://해당/기사/언론사측/주소/]]></OUTLINK>
+<COPYRIGHT><![CDATA[저작권 문구]]></COPYRIGHT>
+<RELATED_NEWS_LIST>
+<RELATED_NEWS>
+<SUBJECT><![CDATA[관련기사제목]]></SUBJECT>
+<RELATED_NEWS_URL><![CDATA[http://해당/기사/언론사측/주소/]]></RELATED_NEWS_URL>
+</RELATED_NEWS>
+<RELATED_NEWS>
+<SUBJECT><![CDATA[관련기사제목]]></SUBJECT>
+<RELATED_NEWS_URL><![CDATA[http://해당/기사/언론사측/주소/]]></RELATED_NEWS_URL>
+</RELATED_NEWS>
+</RELATED_NEWS_LIST>
+</EXT>
+</NEWS>
